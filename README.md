@@ -122,3 +122,58 @@ Se eligió **CC BY-NC-SA 4.0** por las siguientes razones:
 
 ----
 
+## 5. 🎯 Reporte de Visión
+
+### 5.1 Descripción general del software
+
+**burbuja pets** es una aplicación de consola desarrollada en **Python** que automatiza la gestión de PQRS (Peticiones, Quejas, Reclamos y Sugerencias) recibidas por el grupo estudiantil **MEPEGA** para la atención de perros y gatos en los campus de la Universidad de Antioquia.
+
+Actualmente, MEPEGA registra las PQRS de forma manual (papel y lápiz), lo cual genera:
+- Pérdida de información.
+- Duplicidad de radicados.
+- Dificultad para hacer seguimiento.
+- Ausencia de estadísticas.
+
+**burbuja pets** soluciona estos problemas digitalizando el proceso, validando los datos, generando radicados en formato ASCII y produciendo estadísticas exportables a Power BI.
+
+### 5.2 Objetivos
+
+#### Objetivo general
+Desarrollar un sistema de consola en Python que permita gestionar de forma eficiente las PQRS de MEPEGA, garantizando la integridad de los datos, la trazabilidad de cada radicado y la generación de estadísticas.
+
+#### Objetivos específicos
+1. Implementar un módulo de autenticación con control de intentos.
+2. Validar todos los campos de las PQRS según reglas estrictas.
+3. Almacenar los registros en 4 archivos planos independientes por tipo de solicitud.
+4. Generar comprobantes de radicado en formato ASCII de 120 caracteres.
+5. Permitir la consulta y actualización del estado de las PQRS.
+6. Calcular 6 estadísticas clave para la toma de decisiones.
+7. Exportar los datos para su visualización en Power BI.
+
+### 5.3 Beneficios
+
+#### Para MEPEGA
+- ✅ Reducción del 90% del tiempo de radicación.
+- ✅ Eliminación de radicados duplicados.
+- ✅ Trazabilidad completa del ciclo de vida de cada PQRS.
+- ✅ Alertas automáticas de vencimiento.
+
+#### Para los solicitantes
+- ✅ Radicado inmediato con formato profesional.
+- ✅ Seguimiento claro del estado de su solicitud.
+
+#### Para la Universidad
+- ✅ Estadísticas para la toma de decisiones sobre bienestar animal.
+- ✅ Base para futuras integraciones con otros sistemas.
+
+### 5.4 Alcance
+
+El sistema **incluye**:
+- Autenticación y control de sesión.
+- Registro, consulta y actualización de PQRS.
+- Generación de radicados ASCII.
+- Estadísticas y exportación a Power BI.
+
+---
+
+
