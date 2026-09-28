@@ -176,4 +176,155 @@ El sistema **incluye**:
 
 ---
 
+---
+
+## 6. 📋 Especificación de Requisitos
+
+### 6.1 Requisitos Funcionales (RF)
+
+| ID | Nombre | Descripción | Prioridad |
+|----|--------|-------------|-----------|
+| RF-01 | Autenticación | El sistema debe permitir el ingreso con usuario y contraseña validados contra `usuarios.txt`. | Alta |
+| RF-02 | Control de intentos | Tras 3 intentos fallidos, la cuenta se bloquea 30 segundos. | Alta |
+| RF-03 | Registrar PQRS | El sistema debe permitir registrar PQRS con todos los campos validados. | Alta |
+| RF-04 | Validar datos del solicitante | Validar nombre, documento, teléfono, correo y dirección según reglas. | Alta |
+| RF-05 | Validar información PQRS | Validar tipo, fecha, canal, asunto y descripción. | Alta |
+| RF-06 | Generar ID auto-incremental | Cada tipo de PQRS tendrá su propio contador independiente. | Alta |
+| RF-07 | Calcular fecha máxima de respuesta | Fecha de radicación + **15 días calendario** (ajustado). | Alta |
+| RF-08 | Estado inicial | Toda PQRS se registra con estado "Registrada". | Alta |
+| RF-09 | Flujo de estados | Registrada → En proceso → Solucionada. | Media |
+| RF-10 | Imprimir radicado ASCII | Generar comprobante .txt de 120 caracteres por línea. | Alta |
+| RF-11 | Gestionar 4 archivos planos | Peticion.txt, Queja.txt, Reclamo.txt, Sugerencia.txt. | Alta |
+| RF-12 | Consultar PQRS | Listar registros por tipo de solicitud. | Media |
+| RF-13 | Actualizar estado | Cambiar el estado de una PQRS respetando el flujo. | Media |
+| RF-14 | Estadísticas | Calcular promedio de días + 5 estadísticas adicionales. | Alta |
+| RF-15 | Asignar usuario registrador | Vincular automáticamente el usuario autenticado. | Media |
+| RF-16 | Exportar a Power BI | Los archivos planos deben ser legibles por Power BI. | Media |
+
+### 6.1.1 Regla especial: Consecutivo independiente por archivo
+
+Cada tipo de PQRS tiene su **propio contador de ID auto-incremental**, independiente de los demás:
+
+| Archivo | Consecutivo | Ejemplo |
+|---------|-------------|---------|
+| `Peticion.txt` | 1, 2, 3, 4... | Petición #1, Petición #2 |
+| `Queja.txt` | 1, 2, 3, 4... | Queja #1, Queja #2 |
+| `Reclamo.txt` | 1, 2, 3, 4... | Reclamo #1, Reclamo #2 |
+| `Sugerencia.txt` | 1, 2, 3, 4... | Sugerencia #1, Sugerencia #2 |
+
+**Importante:** No se puede repetir un ID dentro del mismo archivo, pero sí puede existir el mismo número en archivos distintos (Petición #1 y Queja #1 son válidos).
+
+**Implementación:** La función `obtener_siguiente_id()` en `src/archivos.py` lee el último ID del archivo correspondiente y le suma 1.
+
+### 6.2 Requisitos No Funcionales (RNF)
+
+| ID | Nombre | Descripción |
+|----|--------|-------------|
+| RNF-01 | Lenguaje | Desarrollado en Python 3.8+. |
+| RNF-02 | Modularización | Código separado en `validaciones.py`, `archivos.py`, `reportes.py`. |
+| RNF-03 | Portabilidad | Debe ejecutarse en Windows, Linux y macOS. |
+| RNF-04 | Usabilidad | Interfaz de consola clara, con menús numerados. |
+| RNF-05 | Rendimiento | Debe procesar 1000 registros sin demoras perceptibles. |
+| RNF-06 | Persistencia | Uso de archivos planos (sin base de datos). |
+| RNF-07 | Seguridad | Contraseñas almacenadas en archivo local. |
+| RNF-08 | Mantenibilidad | Código comentado y con nombres descriptivos. |
+| RNF-09 | Versionado | Uso de Git y GitHub con commits descriptivos. |
+| RNF-10 | Documentación | README, manual de usuario y actas. |
+| RNF-11 | Formato de radicado | Exactamente 120 caracteres de ancho. |
+| RNF-12 | Cumplimiento de plazo | Fecha máxima = +15 días (ajustado por el equipo). |
+
+### 6.3 Matriz de trazabilidad
+
+| Requisito | Módulo | Archivo |
+|-----------|--------|---------|
+| RF-01, RF-02 | Login | `src/login.py` |
+| RF-03 a RF-10 | Registro | `src/main.py` |
+| RF-04, RF-05 | Validaciones | `src/validaciones.py` |
+| RF-11 | Archivos | `src/archivos.py` |
+| RF-12, RF-13 | Consulta/Actualización | `src/main.py` |
+| RF-14 | Estadísticas | `src/reportes.py` |
+
+---
+
+## 7. 📅 Plan de Proyecto
+
+### 7.1 Metodología
+
+El proyecto se desarrolla con un enfoque **ágil tipo Scrum**: el docente actúa como *Product Owner* y el equipo trabaja en cuatro fases con reuniones semanales de seguimiento.
+
+| Fase | Periodo | Qué se hace |
+|----|--------|-------------|
+| 1. Inicio | 16/09 – 23/09 | Análisis del caso, actas, repositorio y requisitos |
+| 2. Entrega 1 | 22/09 – 30/09 | Puntos 1 a 7, login y estructura de archivos |
+| 3. Desarrollo | 02/10 – 10/11 | Validaciones, registro, radicado, consulta, estados, estadísticas y Power BI |
+| 4. Cierre | 04/11 – 18/11 | Pruebas, manual de usuario y entrega final |
+
+### 7.2 Actividades
+
+Cada actividad de desarrollo se relaciona con los requisitos del punto 6 (columna *Requisitos*), para saber qué parte del sistema construye.
+
+| ID | Actividad | Responsable | Requisitos (punto 6) | Inicio | Fin | Horas |
+|----|-----------|-------------|----------------------|--------|-----|-------|
+| A01 | Lectura del enunciado y análisis del caso MEPEGA | Todo el equipo | — | 16/09 | 17/09 | 4 |
+| A02 | Conformación del equipo y actas (entendimiento, colaboración, responsabilidad) | Todo el equipo | — | 17/09 | 19/09 | 6 |
+| A03 | Crear repositorio GitHub y estructura src/ docs/ images/ data/ | Erika | RNF-09 | 19/09 | 20/09 | 3 |
+| A04 | Entrevista con el PO (docente) y levantamiento de requisitos | Todo el equipo | — | 21/09 | 23/09 | 6 |
+| A05 | README: integrantes y vínculos académicos (puntos 1 y 2) | Erika | — | 22/09 | 24/09 | 5 |
+| A06 | Nombre (Burbuja Pets), logo y tipografía (punto 3) | Yanidi | — | 22/09 | 26/09 | 10 |
+| A07 | Definir la licencia del software (punto 4) | Lorena | — | 24/09 | 24/09 | 3 |
+| A08 | Reporte de visión (punto 5) | Lorena | — | 23/09 | 26/09 | 6 |
+| A09 | Especificación de requisitos (punto 6) | [compañera del punto 6] | — | 23/09 | 28/09 | 10 |
+| A10 | Plan de proyecto: actividades, Gantt y presupuesto (punto 7) | Darci | — | 25/09 | 29/09 | 6 |
+| A11 | Módulo de login CLI y captura del usuario registrador | Erika | RF-01, RF-02, RF-15 | 22/09 | 29/09 | 12 |
+| A12 | Estructura de archivos planos, lectura de BD origen y ID consecutivo | Yanidi | RF-06, RF-11 | 24/09 | 29/09 | 8 |
+| A13 | Armar el PDF final (puntos 1 a 7) y el .zip de la entrega | Lorena | — | 29/09 | 30/09 | 7 |
+| A14 | Funciones de validación de datos | Darci | RF-04, RF-05 | 02/10 | 09/10 | 12 |
+| A15 | Registrar PQRS y escritura en los 4 archivos planos | Erika y Yanidi | RF-03, RF-07, RF-08 | 05/10 | 16/10 | 20 |
+| A16 | Imprimir radicado TXT de 120 caracteres | Yanidi | RF-10 | 13/10 | 20/10 | 10 |
+| A17 | Consultar PQRS | Erika | RF-12 | 19/10 | 23/10 | 6 |
+| A18 | Registrar cambio de estado de la PQRS | Yanidi y Lorena | RF-09, RF-13 | 21/10 | 28/10 | 8 |
+| A19 | Estadísticas y exportación de resultados | Darci | RF-14 | 26/10 | 03/11 | 4 |
+| A20 | Dashboard e informe en Power BI (mínimo 3 páginas) | Darci y Lorena | RF-16 | 29/10 | 10/11 | 20 |
+| A21 | Pruebas integrales y corrección de errores | Todo el equipo | RNF-03, RNF-05, RNF-11 | 04/11 | 11/11 | 16 |
+| A22 | Manual de usuario (docs/) y plan de versionado | Lorena | RNF-10 | 06/11 | 12/11 | 12 |
+| A23 | Entrega final (una semana antes de la sustentación) | Erika | — | 11/11 | 11/11 | 6 |
+| | **Total** | | | | | **200** |
+
+### 7.3 Cronograma (Diagrama de Gantt)
+
+![Diagrama de Gantt](images/gantt_proyecto.png)
+
+**Hitos:**
+
+| Hito | Descripción | Fecha |
+|----|-------------|-------|
+| H1 | Entrega 1 (puntos 1 a 7) en la plataforma | 30/09/2026 |
+| H2 | Sustentación de la Entrega 1 | 01/10/2026 |
+| H3 | Programa completo entregado para revisión | 11/11/2026 |
+| H4 | Entrega 2 y sustentación final (semana 16) | 18/11/2026 |
+
+### 7.4 Presupuesto
+
+El presupuesto no se paga en dinero sino en **tiempo de práctica de formación**, valorado a **1 SMLV** de práctica profesional.
+
+| Concepto | Valor | Cálculo |
+|----|--------|-------------|
+| SMLV 2026 | $1.750.905 | Decreto de salario mínimo 2026 |
+| Horas laborales al mes | 210 | Jornada de 42 h/semana (Ley 2101 de 2021) |
+| Valor hora | $8.337,64 | $1.750.905 ÷ 210 |
+| Horas del equipo | 200 | 4 integrantes × 50 horas |
+| **Costo total** | **$1.667.529** | 200 h × $8.337,64 ≈ 0,95 SMLV |
+
+**Distribución por fase:**
+
+| Fase | Horas | Costo | % |
+|----|--------|-------------|----|
+| 1. Inicio | 19 | $158.415 | 9,5 % |
+| 2. Entrega 1 | 67 | $558.622 | 33,5 % |
+| 3. Desarrollo | 80 | $667.011 | 40,0 % |
+| 4. Cierre | 34 | $283.480 | 17,0 % |
+| **Total** | **200** | **$1.667.529** | **100 %** |
+
+**Recursos sin costo:** Python 3 y VS Code (software libre), GitHub (cuenta UdeA), Power BI Desktop (gratuito), computadores e internet de las integrantes.
+
 
