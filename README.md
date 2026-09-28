@@ -1,6 +1,6 @@
 # 🐾 (burbuja pets)
 
-![Logo](images/logo.png)
+![Logo](images/Logo_Burbuja.Pets.png)
 
 **Universidad de Antioquia — Facultad de Ingeniería**
 **Departamento de Ingeniería Industrial**
