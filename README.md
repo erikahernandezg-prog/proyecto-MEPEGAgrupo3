@@ -31,3 +31,28 @@
 | 4 | lorena isabel orrego sierra | 1007942416 | lorena.orrego@udea.edu.co | Documentación |
 
 ---
+
+## 2. 🎓 Vínculos Académicos y Descripción
+
+Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de la Universidad de Antioquia.
+
+### erika hernandez galvan — Líder del proyecto
+- **Programa:** Ingeniería Industrial
+- **Habilidades:** [ingresar habilidades].
+- **Fortalezas:**[ingresar fortalezas].
+
+### yanidi yoela arrieta requeme — Desarrollador Backend
+- **Programa:** Ingeniería Industrial
+- **Habilidades:** [ingresar habilidades]..
+- **Fortalezas:** [ingresar fortalezas].
+
+### darci vannesa londoño ortiz — QA / Validaciones
+- **Programa:** Ingeniería Industrial
+- **Habilidades:** [ingresar habilidades].
+- **Fortalezas:**[ingresar fortalezas].
+
+### lorena isabel orrego sierra — Documentación
+- **Programa:** Ingeniería Industrial
+- **Habilidades:**[ingresar habilidades].
+- **Fortalezas:**[ingresar fortalezas].
+
