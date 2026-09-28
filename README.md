@@ -273,7 +273,7 @@ Cada actividad de desarrollo se relaciona con los requisitos del punto 6 (column
 | A06 | Nombre (Burbuja Pets), logo y tipografía (punto 3) | Yanidi | — | 22/09 | 26/09 | 10 |
 | A07 | Definir la licencia del software (punto 4) | Lorena | — | 24/09 | 24/09 | 3 |
 | A08 | Reporte de visión (punto 5) | Lorena | — | 23/09 | 26/09 | 6 |
-| A09 | Especificación de requisitos (punto 6) | Darci y Erika | RF-01 a RF-016 | 23/09 | 28/09 | 10 |
+| A09 | Especificación de requisitos (punto 6) | Darci y Erika | RF-01 a RF-16 | 23/09 | 28/09 | 10 |
 | A10 | Plan de proyecto: actividades, Gantt y presupuesto (punto 7) | Darci | — | 25/09 | 29/09 | 6 |
 | A11 | Módulo de login CLI y captura del usuario registrador | Erika | RF-01, RF-02, RF-15 | 22/09 | 29/09 | 12 |
 | A12 | Estructura de archivos planos, lectura de BD origen y ID consecutivo | Yanidi | RF-06, RF-11 | 24/09 | 29/09 | 8 |
