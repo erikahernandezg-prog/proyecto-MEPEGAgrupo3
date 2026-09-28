@@ -56,7 +56,7 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 - **Habilidades:**[ingresar habilidades].
 - **Fortalezas:**[ingresar fortalezas].
 
------
+---
 
 ## 3. 🏷️ Nombre del Proyecto y Detalles
 
