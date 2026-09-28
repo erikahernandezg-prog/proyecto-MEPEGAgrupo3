@@ -1,4 +1,4 @@
-# 🐾 (nombre)
+# 🐾 (burbuja pets)
 
 ![Logo](images/logo.png)
 
@@ -61,7 +61,7 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 ## 3. 🏷️ Nombre del Proyecto y Detalles
 
 ### Nombre
-**[agregar nombre]**
+**burbuja pets**
 
 ### Eslogan
 *"[agregar eslogan]"*
@@ -70,7 +70,7 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 ![Logo](images/logo.png)
 
 ### Descripción breve
-**[nombre del proyecto]** es un sistema de consola desarrollado en Python que permite gestionar las Peticiones, Quejas, Reclamos y Sugerencias (PQRS) relacionadas con la atención veterinaria de perros y gatos en los campus de la Universidad de Antioquia, en apoyo al grupo estudiantil MEPEGA.
+**burbuja pets** es un sistema de consola desarrollado en Python que permite gestionar las Peticiones, Quejas, Reclamos y Sugerencias (PQRS) relacionadas con la atención veterinaria de perros y gatos en los campus de la Universidad de Antioquia, en apoyo al grupo estudiantil MEPEGA.
 
 ### ¿Por qué este nombre?
 - **[nombre]** → representa a
