@@ -39,12 +39,12 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 ### erika hernandez galvan — Líder del proyecto
 - **Programa:** Ingeniería Industrial
 - **Habilidades:** [ingresar habilidades].
-- **Fortalezas:**[ingresar fortalezas].
+- **Fortalezas:**[ingresar fortaleza].
 
 ### yanidi yoela arrieta requeme — Desarrollador Backend
 - **Programa:** Ingeniería Industrial
-- **Habilidades:** [ingresar habilidades]..
-- **Fortalezas:** [ingresar fortalezas].
+- **Habilidades:** [Identidad visual, gestión documental en Markdown, lógica y estructuración]..
+- **Fortalezas:** [Creatividad, atención al detalle, comunicación asertiva].
 
 ### darci vannesa londoño ortiz — QA / Validaciones
 - **Programa:** Ingeniería Industrial
@@ -64,7 +64,7 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 **burbuja pets**
 
 ### Eslogan
-*"[agregar eslogan]"*
+*"[Protección y cuidado en lacada huella, el espacio seguro que nuestros peludos merecen]"*
 
 ### Logo
 ![Logo](images/logo.png)
