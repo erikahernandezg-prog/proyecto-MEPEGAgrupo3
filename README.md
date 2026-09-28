@@ -19,4 +19,15 @@
 6. [Especificación de Requisitos](#6--especificación-de-requisitos)
 7. [Plan de Proyecto](#7--plan-de-proyecto)
 
+---
 
+## 1. 👥 Integrantes
+
+| # | Nombre completo | Cédula | Correo institucional | Rol |
+|---|-----------------|--------|----------------------|-----|
+| 1 | erika hernandez galvan | 1014244005 | erika.hernandezg@udea.edu.co | Líder / Desarrollador |
+| 2 | yanidi yoela arrieta requeme | 1001159651 | yoela.arrieta@udea.edu.co | Desarrollador Backend |
+| 3 | darci vanessa londoño ortiz | 1001617038 | dvanessa.londono@udea.edu.co | QA / Validaciones |
+| 4 | lorena isabel orrego sierra | 1007942416 | lorena.orrego@udea.edu.co | Documentación |
+
+---
