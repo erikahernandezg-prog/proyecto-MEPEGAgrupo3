@@ -1,3 +1,12 @@
-Logo HuellaVet
+# 🐾 (nombre)
 
-Universidad de Antioquia — Facultad de Ingeniería Departamento de Ingeniería Industrial Curso: Algoritmia y Programación 2026-2 Profesor: Victor Hugo Mercado Ramos
+![Logo](images/logo.png)
+
+**Universidad de Antioquia — Facultad de Ingeniería**
+**Departamento de Ingeniería Industrial**
+**Curso: Algoritmia y Programación 2026-2**
+**Profesor:** Victor Hugo Mercado Ramos
+
+---
+
+
