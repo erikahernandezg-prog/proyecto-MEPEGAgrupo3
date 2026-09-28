@@ -56,3 +56,25 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 - **Habilidades:**[ingresar habilidades].
 - **Fortalezas:**[ingresar fortalezas].
 
+-----
+
+## 3. 🏷️ Nombre del Proyecto y Detalles
+
+### Nombre
+**[agregar nombre]**
+
+### Eslogan
+*"[agregar eslogan]"*
+
+### Logo
+![Logo](images/logo.png)
+
+### Descripción breve
+**[nombre del proyecto]** es un sistema de consola desarrollado en Python que permite gestionar las Peticiones, Quejas, Reclamos y Sugerencias (PQRS) relacionadas con la atención veterinaria de perros y gatos en los campus de la Universidad de Antioquia, en apoyo al grupo estudiantil MEPEGA.
+
+### ¿Por qué este nombre?
+- **[nombre]** → representa a
+- **[otra parte del nombre]** → hace referencia a.
+- Juntos, comunican cercanía, cuidado y profesionalismo.
+
+
