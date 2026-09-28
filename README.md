@@ -99,3 +99,26 @@ Este proyecto se distribuye bajo la licencia:
 
 ### Cómo citar este proyecto:
 > erika hernadez,yanidi yoela arrieta,darci vannesa londoño,lorena isabel orrego . (2026). burbuja pets: Gestor de PQRS para la atención veterinaria de MEPEGA. Universidad de Antioquia. Licencia CC BY-NC-SA 4.0.
+
+### Justificación de la licencia
+
+Se eligió **CC BY-NC-SA 4.0** por las siguientes razones:
+
+**Justificación legal:**
+- Es una licencia reconocida internacionalmente (Creative Commons).
+- Protege la autoría del equipo mediante la cláusula **BY** (Atribución).
+- Prohíbe el uso comercial (**NC**), coherente con el carácter académico y sin ánimo de lucro del proyecto MEPEGA.
+- Obliga a compartir las mejoras bajo la misma licencia (**SA**), fomentando el software libre.
+
+**Justificación técnica:**
+- Es compatible con proyectos académicos y de código abierto.
+- No impone restricciones incompatibles con el uso educativo.
+- Permite la reutilización por parte de otros estudiantes de la UdeA.
+
+**Alternativas descartadas:**
+- **MIT / Apache 2.0:** permiten uso comercial, lo cual no es deseable.
+- **GPL v3:** es para software puro, no para documentación y contenido mixto.
+- **CC0:** elimina la atribución, exponiendo el proyecto al plagio.
+
+----
+
