@@ -77,4 +77,25 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 - **[otra parte del nombre]** → hace referencia a.
 - Juntos, comunican cercanía, cuidado y profesionalismo.
 
+----
 
+## 4. 📜 Licencia del Software
+
+Este proyecto se distribuye bajo la licencia:
+
+### **Creative Commons Atribución-NoComercial-CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**
+
+**Resumen de la licencia:**
+
+| Icono | Permiso | Descripción |
+|-------|---------|-------------|
+| ✅ | Compartir | Copiar y redistribuir el material en cualquier medio o formato. |
+| ✅ | Adaptar | Remezclar, transformar y construir a partir del material. |
+| ⚠️ | Atribución | Debes dar crédito al autor original. |
+| ⚠️ | NoComercial | No puedes usar el material con fines comerciales. |
+| ⚠️ | CompartirIgual | Si transformas el material, debes distribuirlo bajo la misma licencia. |
+
+🔗 **Enlace oficial:** https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+### Cómo citar este proyecto:
+> erika hernadez,yanidi yoela arrieta,darci vannesa londoño,lorena isabel orrego . (2026). burbuja pets: Gestor de PQRS para la atención veterinaria de MEPEGA. Universidad de Antioquia. Licencia CC BY-NC-SA 4.0.
