@@ -64,10 +64,10 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 **burbuja pets**
 
 ### Eslogan
-*"[Protección y cuidado en lacada huella, el espacio seguro que nuestros peludos merecen]"*
+*"[Protección y cuidado en cada huella, el espacio seguro que nuestros peludos merecen]"*
 
 ### Logo
-![Logo](images/logo.png)
+![Logo](images/Logo.png)
 
 ### Descripción breve
 **burbuja pets** es un sistema de consola desarrollado en Python que permite gestionar las Peticiones, Quejas, Reclamos y Sugerencias (PQRS) relacionadas con la atención veterinaria de perros y gatos en los campus de la Universidad de Antioquia, en apoyo al grupo estudiantil MEPEGA.
