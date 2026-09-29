@@ -1,4 +1,4 @@
-# 🐾 burbuja pets
+# 🐾 Burbuja pets
 
 ![Logo](images/Logo_Burbuja.Pets.png)
 
