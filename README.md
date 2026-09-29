@@ -212,7 +212,7 @@ Cada tipo de PQRS tiene su **propio contador de ID auto-incremental**, independi
 
 **Importante:** No se puede repetir un ID dentro del mismo archivo, pero sí puede existir el mismo número en archivos distintos (Petición #1 y Queja #1 son válidos).
 
-**Implementación:** La función obtener_siguiente_id() en src/archivos.py lee el último ID del archivo correspondiente y le suma 1.
+**Implementación:** La función "obtener_siguiente_id()" en "src/archivos.py" lee el último ID del archivo correspondiente y le suma 1.
 
 ### 6.2 Requisitos No Funcionales (RNF)
 
