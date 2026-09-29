@@ -6,8 +6,8 @@
 
 | Dato de la reunión | Detalle |
 | :--- | :--- |
-| **Fecha** | [22/sept/2026] |
-| **Redactor designado** | [Yoela Arrieta] |
+| **Fecha** | 22/sept/2026 |
+| **Redactor designado** | Yoela Arrieta |
 
 ---
 
@@ -39,9 +39,9 @@
 | :--- | :--- | :---: | :---: |
 | **Integrante 1** | Módulo de login y menú principal, plan de versionado (punto 8) y orden final del repositorio | ☐ |
 | **Integrante 2** | Registro de PQRS, consulta y cambio de estado, e impresión del radicado ASCII de 120 caracteres | ☐ |
-| **Integrante 3** | `validaciones.py` y `archivos.py` (lectura/escritura de los 4 archivos planos) | ☐ |
-| **Integrante 4** | `reportes.py`, tablero de Power BI (mínimo 3 páginas) y manual de usuario en `docs` | ☐ |
-| **Todos** | Integración, pruebas cruzadas y preparación de la sustentación | [DD/MM] | ☐ |
+| **Integrante 3** | `validaciones` y `archivos` (lectura/escritura de los 4 archivos planos) | ☐ |
+| **Integrante 4** | `reportes`, tablero de Power BI (mínimo 3 páginas) y manual de usuario en `docs` | ☐ |
+| **Todos** | Integración, pruebas cruzadas y preparación de la sustentación | una semana antes de la sustentación | ☐ |
 
 -  **Regla de sustentación:**  aunque cada persona lidera una parte, todos deben poder responder preguntas sobre cualquier módulo del programa.
 
@@ -63,9 +63,9 @@ Cada integrante firma aceptando las responsabilidades asignadas.
 
 | Integrantes | Nombre Completo | Firma | 
 | :--- | :--- | :--- |
-| Integrante 1 | [Erika Hernandez Galvan] | ![firma erika](images/firma_Erika.png) |
-| Integrante 2 | [Yanidi Yoela Arrieta Requeme] | ![firma Yoela](image/firma_Yoela.png) |
-| Integrante 3 | [Darci Vanessa Londoño Ortiz] | ![firma Darci](image/firma_Darci.png) |
-| Integrante 4 | [Lorena Isabel Orrego Sierra] | ![firma Lorena](image/firma_Lorena.png) |
+| Integrante 1 | Erika Hernandez Galvan | <img src="../images/firma_Erika.png" width="120" /> |
+| Integrante 2 | Yanidi Yoela Arrieta Requeme | <img src="../images/firma_Yoela.png" width="120" />  |
+| Integrante 3 | Darci Vanessa Londoño Ortiz | <img src="../images/firma_Darci.png" width="120" />  |
+| Integrante 4 | Lorena Isabel Orrego Sierra | <img src="../images/firma_Lorena.png" width="120" />  |
 
 
