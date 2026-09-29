@@ -8,9 +8,9 @@
 
 | Datos de la reunión | Detalles |
 |:--- | :--- |
-|**Fecha** | [21/sept/2026] |
-|**Medio** | [Google Meet] |
-|**Redactor** | [Yoela Arrieta]
+|**Fecha** | 21/sept/2026 |
+|**Medio** | Google Meet |
+|**Redactor** | Yoela Arrieta |
 
 ---
 
@@ -40,7 +40,7 @@
 | **GitHub** | Código, documentos y control de versiones | Continuo |
 
 
-- **Horario sugerido de reuniones:** [acordados a conveniencia de todas las integrantes].
+- **Horario sugerido de reuniones:** acordados a conveniencia de todas las integrantes.
 
 ---
 
@@ -63,7 +63,7 @@
 
 | Integrantes | Nombre Completo | Firma | 
 | :--- | :--- | :--- |
-| Integrante 1 | [Erika Hernandez Galvan] | ![firma erika](images/firma_Erika.png) |
-| Integrante 2 | [Yanidi Yoela Arrieta Requeme] | ![firma Yoela](image/firma_Yoela.png) |
-| Integrante 3 | [Darci Vanessa Londoño Ortiz] | ![firma Darci](image/firma_Darci.png) |
-| Integrante 4 | [Lorena Isabel Orrego Sierra] | ![firma Lorena](image/firma_Lorena.png) |
+| Integrante 1 | [Erika Hernandez Galvan] | ![firma erika](../images/firma_Erika.png) |
+| Integrante 2 | [Yanidi Yoela Arrieta Requeme] | ![firma Yoela](../images/firma_Yoela.png) |
+| Integrante 3 | [Darci Vanessa Londoño Ortiz] | ![firma Darci](../images/firma_Darci.png) |
+| Integrante 4 | [Lorena Isabel Orrego Sierra] | ![firma Lorena](../images/firma_Lorena.png) |
