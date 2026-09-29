@@ -63,7 +63,7 @@
 
 | Integrantes | Nombre Completo | Firma | 
 | :--- | :--- | :--- |
-| Integrante 1 | Erika Hernandez Galvan | ![firma erika](../images/firma_Erika.png) |
-| Integrante 2 | Yanidi Yoela Arrieta Requeme | ![firma Yoela](../images/firma_Yoela.png) |
-| Integrante 3 | Darci Vanessa Londoño Ortiz | ![firma Darci](../images/firma_Darci.png) |
-| Integrante 4 | Lorena Isabel Orrego Sierra | ![firma Lorena](../images/firma_Lorena.png) |
+| Integrante 1 | Erika Hernandez Galvan | <img src="../images/firma_Erika.png" width="110" /> |
+| Integrante 2 | Yanidi Yoela Arrieta Requeme | <img src="../images/firma_Yoela.png" width="110" /> |
+| Integrante 3 | Darci Vanessa Londoño Ortiz | <img src="../images/firma_Darci.png" width="110" /> |
+| Integrante 4 | Lorena Isabel Orrego Sierra | <img src="../images/firma_Lorena.png" width="110" /> |
