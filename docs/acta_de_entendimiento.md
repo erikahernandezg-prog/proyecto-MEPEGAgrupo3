@@ -40,9 +40,9 @@
 | Integrantes | Lo que espera aportar | meta personal |
 | :--- | :--- | :--- | 
 |**Erika Hernandez**| Asumir el liderato del repositorio y mantener una comunicación asertiva para delegar responsabilidades, pensamiento lógico | Aprender muy bien el manejo de GitHub |
-|**Yoela Arrieta** | validación y estructuración de datos, analisis y diseño del sistema, pensamiento lógico | entender muy bien como funcionan los codigos |
-|**Darci Londoño** | Manejo de datos y archivos, pensamiento lógico,limpieza de codigos | entender muy bien sobre la gestion de los entornos locales de los programas a utilizar |
-|**Lorena Orrego** | Persistencia y control de archivos, pruebas y depuración, pensamiento lógico | manejar el dominio de la sintaxis e identificaion de fallas en variables, ciclos y demás |
+|**Yoela Arrieta** | validación y estructuración de datos, analisis y diseño del sistema, pensamiento lógico | Entender muy bien como funcionan los codigos |
+|**Darci Londoño** | Manejo de datos y archivos, pensamiento lógico,limpieza de codigos | Entender muy bien sobre la gestion de los entornos locales de los programas a utilizar |
+|**Lorena Orrego** | Persistencia y control de archivos, pruebas y depuración, pensamiento lógico | Manejar el dominio de la sintaxis e identificaion de fallas en variables, ciclos y demás |
 
 ---
 
