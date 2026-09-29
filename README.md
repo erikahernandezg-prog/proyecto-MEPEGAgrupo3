@@ -1,4 +1,4 @@
-# 🐾 (burbuja pets)
+# 🐾 burbuja pets
 
 ![Logo](images/Logo_Burbuja.Pets.png)
 
@@ -25,10 +25,10 @@
 
 | # | Nombre completo | Cédula | Correo institucional | Rol |
 |---|-----------------|--------|----------------------|-----|
-| 1 | erika hernandez galvan | 1014244005 | erika.hernandezg@udea.edu.co | Líder / Desarrollador |
-| 2 | yanidi yoela arrieta requeme | 1001159651 | yoela.arrieta@udea.edu.co | Desarrollador Backend |
-| 3 | darci vanessa londoño ortiz | 1001617038 | dvanessa.londono@udea.edu.co | QA / Validaciones |
-| 4 | lorena isabel orrego sierra | 1007942416 | lorena.orrego@udea.edu.co | Documentación |
+| 1 | Erika Hernandez Galvan | 1014244005 | erika.hernandezg@udea.edu.co | Líder / Desarrollador |
+| 2 | Yanidi Yoela Arrieta Requeme | 1001159651 | yoela.arrieta@udea.edu.co | Desarrollador Backend |
+| 3 | Darci Vanessa Londoño Ortiz | 1001617038 | dvanessa.londono@udea.edu.co | QA / Validaciones |
+| 4 | Lorena Isabel Orrego Sierra | 1007942416 | lorena.orrego@udea.edu.co | Documentación |
 
 ---
 
@@ -36,25 +36,25 @@
 
 Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de la Universidad de Antioquia.
 
-### erika hernandez galvan — Líder del proyecto
+### Erika Hernandez Galvan — Líder del proyecto
 - **Programa:** Ingeniería Industrial
-- **Habilidades:** [ingresar habilidades].
-- **Fortalezas:**[ingresar fortaleza].
+- **Habilidades:** [Python, Git/GitHub, liderazgo, gestión de proyectos].
+- **Fortalezas:**[Organización, comunicación asertiva, resolución de conflictos].
 
-### yanidi yoela arrieta requeme — Desarrollador Backend
+### Yanidi Yoela Arrieta Requeme — Desarrollador Backend
 - **Programa:** Ingeniería Industrial
 - **Habilidades:** [Identidad visual, gestión documental en Markdown, lógica y estructuración]..
 - **Fortalezas:** [Creatividad, atención al detalle, comunicación asertiva].
 
-### darci vannesa londoño ortiz — QA / Validaciones
+### Darci Vannesa Londoño Ortiz — QA / Validaciones
 - **Programa:** Ingeniería Industrial
-- **Habilidades:** [ingresar habilidades].
-- **Fortalezas:**[ingresar fortalezas].
+- **Habilidades:** [testing manual, análisis de errores, manejo de casos de prueba, atención al detalle.].
+- **Fortalezas:**[pensamiento crítico, capacidad para detectar errores, paciencia para probar múltiples escenarios].
 
-### lorena isabel orrego sierra — Documentación
+### Lorena Isabel Orrego Sierra — Documentación
 - **Programa:** Ingeniería Industrial
-- **Habilidades:**[ingresar habilidades].
-- **Fortalezas:**[ingresar fortalezas].
+- **Habilidades:**[organización de información, ortografía y gramática, elaboración de informes.].
+- **Fortalezas:**[síntesis de ideas, responsabilidad, creatividad para presentar información, comunicación escrita efectiva.].
 
 ---
 
@@ -173,8 +173,6 @@ El sistema **incluye**:
 - Registro, consulta y actualización de PQRS.
 - Generación de radicados ASCII.
 - Estadísticas y exportación a Power BI.
-
----
 
 ---
 
