@@ -12,7 +12,7 @@
 
 1. [Acta de Entendimiento](docs/acta_de_entendimiento.md)
 2. [Acta de Colaboración](docs/acta_de_colaboracion.md)
-3. [Acta de Responsabilidad](docs/acta_de_responsabilidad)
+3. [Acta de Responsabilidad](docs/acta_de_responsabilidad.md)
 
 ---
 
