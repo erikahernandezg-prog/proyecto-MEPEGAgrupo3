@@ -1,4 +1,4 @@
-# 🐾 Burbuja pets
+# 🐾 Burbuja Pets
 
 ![Logo](images/Logo_Burbuja.Pets.png)
 
@@ -68,7 +68,7 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 ## 3. 🏷️ Nombre del Proyecto y Detalles
 
 ### Nombre
-**burbuja pets**
+**Burbuja Pets**
 
 ### Eslogan
 *"[Protección y cuidado en cada huella, el espacio seguro que nuestros peludos merecen]"*
@@ -77,7 +77,7 @@ Todos los integrantes pertenecemos al programa de **Ingeniería Industrial** de 
 ![Logo](images/Logo.png)
 
 ### Descripción breve
-**burbuja pets** es un sistema de consola desarrollado en Python que permite gestionar las Peticiones, Quejas, Reclamos y Sugerencias (PQRS) relacionadas con la atención veterinaria de perros y gatos en los campus de la Universidad de Antioquia, en apoyo al grupo estudiantil MEPEGA.
+**Burbuja Pets** es un sistema de consola desarrollado en Python que permite gestionar las Peticiones, Quejas, Reclamos y Sugerencias (PQRS) relacionadas con la atención veterinaria de perros y gatos en los campus de la Universidad de Antioquia, en apoyo al grupo estudiantil MEPEGA.
 
 ### ¿Por qué este nombre?
 - **[Burbuja]** → simboliza un entorno de protección y trasparencia, donde la salud, los derechos y el bienestar de cada peludito están completamente resguardado.
@@ -105,7 +105,7 @@ Este proyecto se distribuye bajo la licencia:
 🔗 **Enlace oficial:** https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 ### Cómo citar este proyecto:
-> erika hernadez,yanidi yoela arrieta,darci vannesa londoño,lorena isabel orrego . (2026). burbuja pets: Gestor de PQRS para la atención veterinaria de MEPEGA. Universidad de Antioquia. Licencia CC BY-NC-SA 4.0.
+> erika hernadez,yanidi yoela arrieta,darci vannesa londoño,lorena isabel orrego . (2026). Burbuja Pets: Gestor de PQRS para la atención veterinaria de MEPEGA. Universidad de Antioquia. Licencia CC BY-NC-SA 4.0.
 
 ### Justificación de la licencia
 
@@ -133,7 +133,7 @@ Se eligió **CC BY-NC-SA 4.0** por las siguientes razones:
 
 ### 5.1 Descripción general del software
 
-**burbuja pets** es una aplicación de consola desarrollada en **Python** que automatiza la gestión de PQRS (Peticiones, Quejas, Reclamos y Sugerencias) recibidas por el grupo estudiantil **MEPEGA** para la atención de perros y gatos en los campus de la Universidad de Antioquia.
+**Burbuja Pets** es una aplicación de consola desarrollada en **Python** que automatiza la gestión de PQRS (Peticiones, Quejas, Reclamos y Sugerencias) recibidas por el grupo estudiantil **MEPEGA** para la atención de perros y gatos en los campus de la Universidad de Antioquia.
 
 Actualmente, MEPEGA registra las PQRS de forma manual (papel y lápiz), lo cual genera:
 - Pérdida de información.
@@ -141,7 +141,7 @@ Actualmente, MEPEGA registra las PQRS de forma manual (papel y lápiz), lo cual 
 - Dificultad para hacer seguimiento.
 - Ausencia de estadísticas.
 
-**BURBUJA PETS** soluciona estos problemas digitalizando el proceso, validando los datos, generando radicados en formato ASCII y produciendo estadísticas y gráficos en Python.
+**Burbuja Pets** soluciona estos problemas digitalizando el proceso, validando los datos, generando radicados en formato ASCII y produciendo estadísticas y gráficos en Python.
 
 ### 5.2 Objetivos
 
