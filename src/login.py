@@ -6,7 +6,8 @@
 import os
 import time
 
-RUTA_USUARIOS = os.path.join("data", "Usuarios.txt")
+CARPETA_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RUTA_USUARIOS = os.path.join(CARPETA_BASE, "data", "Usuarios.txt")
 MAX_INTENTOS = 3
 SEGUNDOS_BLOQUEO = 30
 
