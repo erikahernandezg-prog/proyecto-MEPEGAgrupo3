@@ -6,7 +6,24 @@
 
 import os
 from datetime import datetime
-from archivos import leer_todas, CARPETA_DATA
+CARPETA_DATA = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data")
+TIPOS = ["Peticion", "Queja", "Reclamo", "Sugerencia"]
+
+
+def leer_todas():
+    """Lee las PQRS de los 4 archivos y las devuelve como una lista de diccionarios."""
+    todas = []
+    for tipo in TIPOS:
+        ruta = os.path.join(CARPETA_DATA, tipo + ".txt")
+        if not os.path.exists(ruta):
+            continue
+        with open(ruta, "r", encoding="utf-8") as archivo:
+            encabezado = archivo.readline().strip().split("|")
+            for linea in archivo:
+                valores = linea.rstrip("\n").split("|")
+                if len(valores) == len(encabezado):
+                    todas.append(dict(zip(encabezado, valores)))
+    return todas
 
 DIAS_ALERTA = 5  # una PQRS está "próxima a vencer" si le quedan 5 días o menos
 
