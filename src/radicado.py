@@ -1,7 +1,7 @@
 # radicado.py: Generador del comprobante (radicado) de cada PQRS (Burbuja Pets).
 # Responsable: Yanidis Yoela Arrieta Requeme 
 # Descripción: Crea un .txt con marco ASCII (+ - |) donde CADA línea mide exactamente 120 caracteres.
-No incluye la descripción detallada; si no hay dirección escribe "N/A".
+# No incluye la descripción detallada; si no hay dirección escribe "N/A".
 
 
 from pathlib import Path
