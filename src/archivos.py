@@ -2,7 +2,7 @@
 #Responsable: Yanidis Yoela Arrieta Requeme
 
 # Etete archivo maneja los 4 archivos planos (Peticion.txt, Queja.txt, Reclamo.txt, Sugerencia.txt)
-#guardados en la carpeta data. Cada línea es una PQRS; los campos van separados por "|".
+# guardados en la carpeta data. Cada línea es una PQRS; los campos van separados por "|".
 
 
 from pathlib import Path
