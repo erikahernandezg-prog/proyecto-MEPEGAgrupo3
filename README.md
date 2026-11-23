@@ -141,7 +141,7 @@ Actualmente, MEPEGA registra las PQRS de forma manual (papel y lápiz), lo cual 
 - Dificultad para hacer seguimiento.
 - Ausencia de estadísticas.
 
-**burbuja pets** soluciona estos problemas digitalizando el proceso, validando los datos, generando radicados en formato ASCII y produciendo estadísticas exportables a Power BI.
+**BURBUJA PETS** soluciona estos problemas digitalizando el proceso, validando los datos, generando radicados en formato ASCII y produciendo estadísticas y gráficos en Python.
 
 ### 5.2 Objetivos
 
@@ -155,7 +155,7 @@ Desarrollar un sistema de consola en Python que permita gestionar de forma efici
 4. Generar comprobantes de radicado en formato ASCII de 120 caracteres.
 5. Permitir la consulta y actualización del estado de las PQRS.
 6. Calcular 6 estadísticas clave para la toma de decisiones.
-7. Exportar los datos para su visualización en Power BI.
+7. Mostrar las estadísticas en gráficos con Python. 
 
 ### 5.3 Beneficios
 
@@ -179,13 +179,15 @@ El sistema **incluye**:
 - Autenticación y control de sesión.
 - Registro, consulta y actualización de PQRS.
 - Generación de radicados ASCII.
-- Estadísticas y exportación a Power BI.
+- Estadísticas y gráficos en Python.
 
 ---
 
 ## 6. 📋 Especificación de Requisitos
 
 ### 6.1 Requisitos Funcionales (RF)
+
+Los requisitos funcionales indican **qué debe hacer** el sistema: las acciones y operaciones que ejecuta.
 
 | ID | Nombre | Descripción | Prioridad |
 |----|--------|-------------|-----------|
@@ -204,7 +206,7 @@ El sistema **incluye**:
 | RF-13 | Actualizar estado | Cambiar el estado de una PQRS respetando el flujo. | Media |
 | RF-14 | Estadísticas | Calcular promedio de días + 5 estadísticas adicionales. | Alta |
 | RF-15 | Asignar usuario registrador | Vincular automáticamente el usuario autenticado. | Media |
-| RF-16 | Exportar a Power BI | Los archivos planos deben ser legibles por Power BI. | Media |
+| RF-16 | Gráficos de estadísticas | Mostrar las estadísticas en gráficos con Python (pandas y matplotlib). | Media |
 
 ### 6.1.1 Regla especial: Consecutivo independiente por archivo
 
@@ -222,6 +224,8 @@ Cada tipo de PQRS tiene su **propio contador de ID auto-incremental**, independi
 **Implementación:** La función "obtener_siguiente_id()" en "src/archivos.py" lee el último ID del archivo correspondiente y le suma 1.
 
 ### 6.2 Requisitos No Funcionales (RNF)
+
+Los requisitos no funcionales indican **cómo debe hacerlo**: la calidad, la seguridad, el rendimiento y las condiciones técnicas del sistema.
 
 | ID | Nombre | Descripción |
 |----|--------|-------------|
@@ -330,7 +334,9 @@ El presupuesto no se paga en dinero sino en **tiempo de práctica de formación*
 | 4. Cierre | 34 | $283.480 | 17,0 % |
 | **Total** | **200** | **$1.667.529** | **100 %** |
 
-**Recursos sin costo:** Python 3 y VS Code (software libre), GitHub (cuenta UdeA), Power BI Desktop (gratuito), computadores e internet de las integrantes.
+**Recursos sin costo:** Python 3 y VS Code (software libre), GitHub (cuenta UdeA), pandas y matplotlib (librerías gratuitas de Python), computadores e internet de las integrantes.
+
+---
 
 ## 8. 🔢 Plan de Versionado
 
