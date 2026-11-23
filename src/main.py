@@ -97,12 +97,10 @@ def registrar_pqrs(usuario_registro):
     # El ID lo asigna archivos.py al guardar.
     datos["id"] = archivos.obtener_siguiente_id(tipo)
 
-    if archivos.guardar_pqrs(tipo, datos):
-        nombre_archivo = radicado.generar_radicado(datos)
-        print(f"\nPQRS registrada con ID {datos['id']}.")
-        print(f"Radicado generado: {nombre_archivo}")
-    else:
-        print("No se pudo guardar la PQRS.")
+    archivos.guardar_pqrs(tipo, datos)
+    nombre_archivo = radicado.generar_radicado(datos)
+    print(f"\nPQRS registrada con ID {datos['id']}.")
+    print(f"Radicado generado: {nombre_archivo}")
 
 
 def consultar_pqrs():
@@ -176,7 +174,8 @@ def main():
         elif opcion == "3":
             cambiar_estado()
         elif opcion == "4":
-            reportes.exportar_reporte()
+            reportes.mostrar_reporte()
+            print("Reporte guardado en:", reportes.exportar_reporte())
             graficos.mostrar_graficos()
         elif opcion == "5":
             print("Hasta luego.")
