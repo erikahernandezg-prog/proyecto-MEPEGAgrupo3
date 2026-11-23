@@ -5,6 +5,7 @@
 
 import os
 import time
+from getpass import getpass
 
 CARPETA_BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RUTA_USUARIOS = os.path.join(CARPETA_BASE, "data", "Usuarios.txt")
@@ -60,7 +61,7 @@ def iniciar_sesion():
                 print("Sesión cancelada.")
                 return None
 
-            contrasena = input("Contraseña: ").strip()
+            contrasena = getpass("Contraseña: ").strip()
 
             encontrado = None
             for u in usuarios:
