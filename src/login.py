@@ -42,52 +42,54 @@ def _cargar_usuarios():
 def iniciar_sesion():
     """
     Pide usuario (o correo) y contraseña.
-    Devuelve el usuario que entró (string) o None si cancela o falla.
+    Devuelve el usuario que entró (string) o None si cancela.
+    Tras 3 intentos fallidos, bloquea 30 segundos y vuelve a pedir.
     """
     usuarios = _cargar_usuarios()
     if not usuarios:
         print("No se encontró el archivo de usuarios.")
         return None
 
-    intentos = 0
-    while intentos < MAX_INTENTOS:
-        print("\n--- INICIO DE SESIÓN ---")
-        identificador = input("Usuario o correo (Enter para cancelar): ").strip()
-        if identificador == "":
-            print("Sesión cancelada.")
-            return None
-
-        contrasena = input("Contraseña: ").strip()
-
-        # Buscar por usuario o por correo institucional.
-        encontrado = None
-        for u in usuarios:
-            if (u["usuario"].lower() == identificador.lower() or
-                    u["correo_institucional"].lower() == identificador.lower()):
-                encontrado = u
-                break
-
-        if encontrado is not None and encontrado["contrasena"] == contrasena:
-            if encontrado["estado"].lower() != "activo":
-                print("El usuario no está activo.")
+    while True:  # ciclo externo: permite reintentar tras el bloqueo
+        intentos = 0
+        while intentos < MAX_INTENTOS:
+            print("\n--- INICIO DE SESIÓN ---")
+            identificador = input("Usuario o correo (Enter para cancelar): ").strip()
+            if identificador == "":
+                print("Sesión cancelada.")
                 return None
-            print(f"Bienvenido/a, {encontrado['nombre_completo']}.")
-            return encontrado["usuario"]
 
-        intentos += 1
-        restantes = MAX_INTENTOS - intentos
-        print(f"Datos incorrectos. Intentos restantes: {restantes}")
+            contrasena = input("Contraseña: ").strip()
 
-    # Bloqueo de 30 segundos con cuenta regresiva.
-    print(f"Cuenta bloqueada por {SEGUNDOS_BLOQUEO} segundos...")
-    for seg in range(SEGUNDOS_BLOQUEO, 0, -1):
-        print(f"  {seg}...", end="\r")
-        time.sleep(1)
-    print("\nPuede intentar de nuevo.")
-    return None
+            encontrado = None
+            for u in usuarios:
+                if (u["usuario"].lower() == identificador.lower() or
+                        u["correo_institucional"].lower() == identificador.lower()):
+                    encontrado = u
+                    break
 
+            if encontrado is not None and encontrado["contrasena"] == contrasena:
+                if encontrado["estado"].lower() != "activo":
+                    print("El usuario no está activo.")
+                    return None
+                print(f"Bienvenido/a, {encontrado['nombre_completo']}.")
+                return encontrado["usuario"]
+
+            intentos += 1
+            restantes = MAX_INTENTOS - intentos
+            print(f"Datos incorrectos. Intentos restantes: {restantes}")
+
+        # Se agotaron los 3 intentos: bloqueo con cuenta regresiva
+        print(f"\nCuenta bloqueada por {SEGUNDOS_BLOQUEO} segundos...")
+        for seg in range(SEGUNDOS_BLOQUEO, 0, -1):
+            print(f"  {seg}...", end="\r")
+            time.sleep(1)
+        print("\nBloqueo terminado. Puede intentar de nuevo.")
+        # El while True vuelve a empezar: pide usuario otra vez
 
 if __name__ == "__main__":
     # Prueba rápida del módulo.
     usuario = iniciar_sesion()
     print("Usuario en sesión:", usuario)
+
+
