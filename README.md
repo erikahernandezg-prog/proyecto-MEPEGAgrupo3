@@ -332,4 +332,45 @@ El presupuesto no se paga en dinero sino en **tiempo de práctica de formación*
 
 **Recursos sin costo:** Python 3 y VS Code (software libre), GitHub (cuenta UdeA), Power BI Desktop (gratuito), computadores e internet de las integrantes.
 
+## 8. 🔢 Plan de Versionado
+
+El versionado permite saber **qué cambió en cada momento** del proyecto. Usamos el formato **X.Y.Z** (versionado semántico):
+
+| Número | Cuándo aumenta | Ejemplo |
+|---|---|---|
+| **X** (mayor) | Cuando el programa cambia mucho o queda completo para entregar | 0.x → 1.0 |
+| **Y** (menor) | Cuando se agrega una función nueva | 1.0 → 1.1 |
+| **Z** (corrección) | Cuando solo se corrige un error | 1.1.0 → 1.1.1 |
+
+Las versiones **0.x** son de desarrollo (el programa aún no está completo) y la **1.0** es la primera versión completa.
+
+### 8.1 Historial de versiones
+
+Los días se cuentan desde el inicio del proyecto (16/09/2026).
+
+| Versión | Fecha | Días desde el inicio | Qué se agregó o cambió | Responsable |
+|---|---|---|---|---|
+| v0.1.0 | 20/09/2026 | 4 | Repositorio en GitHub, carpetas `src`, `docs`, `images` y `data`, y actas del equipo | Erika y Yanidi |
+| v0.2.0 | 30/09/2026 | 14 | Entrega 1: README con los puntos 1 a 7, logo y diagrama de Gantt | Todo el equipo |
+| v0.3.0 | 22/11/2026 | 67 | `validaciones.py` (RF-04, RF-05) y `reportes.py` con las estadísticas (RF-14) | Darci |
+| v0.4.0 | 23/11/2026 | 68 | `archivos.py` (4 archivos planos e ID consecutivo) y `radicado.py` (comprobante de 120 caracteres) | Yanidi |
+| v0.5.0 | 23/11/2026 | 68 | `login.py` y `main.py`: inicio de sesión, menú, registrar, consultar y cambiar estado | Erika |
+| v0.6.0 | 23/11/2026 | 68 | `graficos.py` (gráficos en Python) y manual de usuario | Lorena |
+| **v1.0.0** | 23/11/2026 | 68 | **Versión final:** programa unido y probado, README actualizado (entrega final) | Todo el equipo |
+
+### 8.2 Versiones futuras (propuestas)
+
+| Versión | Qué se podría agregar |
+|---|---|
+| v1.1.0 | Buscar PQRS por número de documento del solicitante |
+| v1.2.0 | Enviar un correo automático al solicitante cuando cambie el estado de su PQRS |
+| v2.0.0 | Cambiar los archivos planos por una base de datos y crear una interfaz gráfica o web |
+
+### 8.3 ¿Cómo se registra cada versión?
+
+1. Cada cambio se sube a GitHub con un **commit** que describe qué se hizo (por ejemplo: *"Agregar reportes.py - estadísticas (RF-14)"*).
+2. Cuando se completa una versión, se actualiza la tabla 8.1.
+3. La versión final (v1.0.0) se puede marcar en GitHub como **Release** (*Crear una nueva versión*), para que quede guardada tal como se entregó.
+
+
 
