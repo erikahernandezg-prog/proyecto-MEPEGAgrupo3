@@ -1,3 +1,5 @@
+#En este archivo se encontrará el código de los gráficos estadisticos del proyecto.
+
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
