@@ -30,12 +30,12 @@
 
 ## 1. 👥 Integrantes
 
-| # | Nombre completo | Cédula | Correo institucional | Rol |
-|---|-----------------|--------|----------------------|-----|
-| 1 | Erika Hernandez Galvan | 1014244005 | erika.hernandezg@udea.edu.co | Líder / Desarrollador |
-| 2 | Yanidi Yoela Arrieta Requeme | 1001159651 | yoela.arrieta@udea.edu.co | Desarrollador Backend |
-| 3 | Darci Vanessa Londoño Ortiz | 1001617038 | dvanessa.londono@udea.edu.co | QA / Validaciones |
-| 4 | Lorena Isabel Orrego Sierra | 1007942416 | lorena.orrego@udea.edu.co | Documentación |
+| # | Nombre completo | Correo institucional | Rol |
+|---|-----------------|----------------------|-----|
+| 1 | Erika Hernandez Galvan | erika.hernandezg@udea.edu.co | Líder / Desarrolladora |
+| 2 | Yanidi Yoela Arrieta Requeme | yoela.arrieta@udea.edu.co | Desarrolladora Backend |
+| 3 | Darci Vanessa Londoño Ortiz | dvanessa.londono@udea.edu.co | QA / Validaciones |
+| 4 | Lorena Isabel Orrego Sierra | lorena.orrego@udea.edu.co | Documentación |
 
 ---
 
@@ -131,6 +131,7 @@ Se eligió **CC BY-NC-SA 4.0** por las siguientes razones:
 
 ## 5. 🎯 Reporte de Visión
 
+
 ### 5.1 Descripción general del software
 
 **Burbuja Pets** es una aplicación de consola desarrollada en **Python** que automatiza la gestión de PQRS (Peticiones, Quejas, Reclamos y Sugerencias) recibidas por el grupo estudiantil **MEPEGA** para la atención de perros y gatos en los campus de la Universidad de Antioquia.
@@ -142,6 +143,9 @@ Actualmente, MEPEGA registra las PQRS de forma manual (papel y lápiz), lo cual 
 - Ausencia de estadísticas.
 
 **Burbuja Pets** soluciona estos problemas digitalizando el proceso, validando los datos, generando radicados en formato ASCII y produciendo estadísticas y gráficos en Python.
+
+#### Impacto en la comunidad universitaria y justificación tecnológica
+La implementación de **Burbuja Pets** genera un impacto positivo directo en la comunidad universitaria de la Universidad de Antioquia, ya que fortalece la convivencia, el bienestar animal y la atención oportuna de las situaciones reportadas por estudiantes, docentes y personal administrativo en los distintos campus. Para su desarrollo se eligió el lenguaje **Python** por su facilidad de mantenimiento, estructura modular y capacidad para procesar datos y generar visualizaciones estadísticas mediante librerías especializadas. Asimismo, el uso de archivos planos **`.txt`** delimitados por `|` permite almacenar y consultar la información de manera ligera, portable y sin depender de servidores externos de bases de datos, facilitando la auditoría directa y la ejecución del sistema en cualquier computador institucional.
 
 ### 5.2 Objetivos
 
@@ -314,28 +318,27 @@ Cada actividad de desarrollo se relaciona con los requisitos del punto 6 (column
 
 ### 7.4 Presupuesto
 
-El presupuesto no se paga en dinero sino en **tiempo de práctica de formación**, valorado a **1 SMLV** de práctica profesional.
+El presupuesto no se paga en dinero directo sino en **tiempo de práctica de formación**, valorado en **pesos (COP)** a partir de **1 SMLV** de práctica profesional.
 
-| Concepto | Valor | Cálculo |
+| Concepto | Valor (COP) | Cálculo |
 |----|--------|-------------|
-| SMLV 2026 | $1.750.905 | Decreto de salario mínimo 2026 |
+| SMLV 2026 | $1.750.905 COP | Decreto de salario mínimo 2026 |
 | Horas laborales al mes | 210 | Jornada de 42 h/semana (Ley 2101 de 2021) |
-| Valor hora | $8.337,64 | $1.750.905 ÷ 210 |
+| Valor hora | $8.337,64 COP | $1.750.905 COP ÷ 210 |
 | Horas del equipo | 200 | 4 integrantes × 50 horas |
-| **Costo total** | **$1.667.529** | 200 h × $8.337,64 ≈ 0,95 SMLV |
+| **Costo total** | **$1.667.529 COP** | 200 h × $8.337,64 COP ≈ 0,95 SMLV |
 
 **Distribución por fase:**
 
-| Fase | Horas | Costo | % |
+| Fase | Horas | Costo (COP) | % |
 |----|--------|-------------|----|
-| 1. Inicio | 19 | $158.415 | 9,5 % |
-| 2. Entrega 1 | 67 | $558.622 | 33,5 % |
-| 3. Desarrollo | 80 | $667.011 | 40,0 % |
-| 4. Cierre | 34 | $283.480 | 17,0 % |
-| **Total** | **200** | **$1.667.529** | **100 %** |
+| 1. Inicio | 19 | $158.415 COP | 9,5 % |
+| 2. Entrega 1 | 67 | $558.622 COP | 33,5 % |
+| 3. Desarrollo | 80 | $667.011 COP | 40,0 % |
+| 4. Cierre | 34 | $283.480 COP | 17,0 % |
+| **Total** | **200** | **$1.667.529 COP** | **100 %** |
 
-**Recursos sin costo:** Python 3 y VS Code (software libre), GitHub (cuenta UdeA), pandas y matplotlib (librerías gratuitas de Python), computadores e internet de las integrantes.
-
+**Recursos sin costo:** Python 3 y VS Code (software libre), GitHub (cuenta UdeA), `pandas` y `matplotlib` (librerías gratuitas de Python), computadores e internet de las integrantes.
 ---
 
 ## 8. 🔢 Plan de Versionado
