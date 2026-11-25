@@ -135,10 +135,29 @@ def cambiar_estado():
     nuevo = pedir_opcion(
         ["En proceso", "Solucionada"], "Nuevo estado:")
 
+    # Se busca la PQRS para saber si existe y cuál es su estado actual.
+    pqrs = None
+    for registro in archivos.leer_pqrs(tipo):
+        if registro["id"].strip() == str(id_pqrs):
+            pqrs = registro
+            break
+    if pqrs is None:
+        print("No existe esa PQRS.")
+        return
+
     if archivos.actualizar_estado(tipo, id_pqrs, nuevo):
-        print("Estado actualizado correctamente.")
+        print(f"Estado actualizado: {pqrs['estado_peticion']} -> {nuevo}")
+        # Días transcurridos desde que se radicó la PQRS hasta hoy
+        radicada = datetime.strptime(pqrs["fecha_radicacion"], "%Y-%m-%d %H:%M:%S")
+        dias = (datetime.now() - radicada).days
+        if nuevo == "Solucionada":
+            print(f"Fecha de respuesta: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            print(f"Días que tomó dar respuesta: {dias}")
+        else:
+            print(f"Días transcurridos desde la radicación: {dias}")
     else:
-        print("No se permite ese cambio de estado.")
+        print(f"No se permite pasar de '{pqrs['estado_peticion']}' a '{nuevo}'.")
+        print("El orden es: Registrada -> En proceso -> Solucionada.")
 
 
 def mostrar_menu():
@@ -160,6 +179,7 @@ def mostrar_menu():
 
 def main():
     """Punto de entrada del programa."""
+    archivos.preparar_archivos()  # agrega la columna fecha_respuesta si falta
     usuario = login.iniciar_sesion()
     if usuario is None:
         print("No se pudo iniciar sesión. Saliendo.")
