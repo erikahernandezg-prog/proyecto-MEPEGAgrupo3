@@ -21,8 +21,11 @@ def leer_todas():
             encabezado = archivo.readline().strip().split("|")
             for linea in archivo:
                 valores = linea.rstrip("\n").split("|")
-                if len(valores) == len(encabezado):
-                    todas.append(dict(zip(encabezado, valores)))
+                if not linea.strip():
+                    continue
+                # Si a una línea le faltan campos, se completan con vacío
+                valores = (valores + [""] * len(encabezado))[:len(encabezado)]
+                todas.append(dict(zip(encabezado, valores)))
     return todas
 
 DIAS_ALERTA = 5  # una PQRS está "próxima a vencer" si le quedan 5 días o menos
@@ -40,16 +43,21 @@ def convertir_fecha(texto):
 
 
 def promedio_dias_respuesta():
-    """Promedio (número entero) de días entre la fecha de radicación y la fecha máxima de respuesta."""
+    """Promedio (número entero) de días reales que tomó responder:
+    fecha de respuesta - fecha de radicación, solo en las PQRS solucionadas
+    que tienen fecha de respuesta guardada.
+    Devuelve (promedio, cantidad de PQRS usadas en el cálculo)."""
     dias = []
     for pqrs in leer_todas():
-        inicio = convertir_fecha(pqrs["fecha_radicacion"])
-        fin = convertir_fecha(pqrs["fecha_maxima_respuesta"])
+        if pqrs.get("estado_peticion") != "Solucionada":
+            continue
+        inicio = convertir_fecha(pqrs.get("fecha_radicacion", ""))
+        fin = convertir_fecha(pqrs.get("fecha_respuesta", ""))
         if inicio and fin:
             dias.append((fin - inicio).days)
     if len(dias) == 0:
-        return 0
-    return round(sum(dias) / len(dias))
+        return 0, 0
+    return round(sum(dias) / len(dias)), len(dias)
 
 
 def contar_por(campo):
@@ -87,6 +95,14 @@ def mas_antiguas(cantidad=5):
     return pendientes[:cantidad]
 
 
+def texto_promedio():
+    """Texto de la estadística obligatoria (promedio de días de respuesta)."""
+    promedio, cantidad = promedio_dias_respuesta()
+    if cantidad == 0:
+        return "Promedio de días de respuesta: aún no hay PQRS solucionadas con fecha de respuesta"
+    return f"Promedio de días de respuesta: {promedio} días (calculado con {cantidad} PQRS solucionadas)"
+
+
 def construir_reporte():
     """Arma el texto completo del reporte de estadísticas."""
     total = len(leer_todas())
@@ -94,7 +110,7 @@ def construir_reporte():
     lineas = ["=" * 60, "ESTADÍSTICAS DE PQRS - BURBUJA PETS",
               "Generado: " + datetime.now().strftime("%Y-%m-%d %H:%M:%S"), "=" * 60,
               f"Total de PQRS registradas: {total}",
-              f"Promedio de días de respuesta: {promedio_dias_respuesta()} días", ""]
+              texto_promedio(), ""]
     titulos = [("tipo_solicitud", "Por tipo de solicitud"), ("tipo_mascota", "Por tipo de mascota"),
                ("canal_recepcion", "Por canal de recepción"), ("campus_relacionado", "Por campus"),
                ("estado_peticion", "Por estado"), ("tipo_documento", "Por tipo de documento")]
