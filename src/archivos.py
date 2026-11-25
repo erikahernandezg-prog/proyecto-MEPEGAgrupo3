@@ -6,6 +6,7 @@
 
 
 from pathlib import Path
+from datetime import datetime
 
 # Carpeta data, calculada de forma robusta sin importar desde dónde se ejecute
 RUTA_DATA = Path(__file__).resolve().parent.parent / "data"
@@ -13,13 +14,14 @@ RUTA_DATA = Path(__file__).resolve().parent.parent / "data"
 # Los 4 tipos válidos
 TIPOS = ["Peticion", "Queja", "Reclamo", "Sugerencia"]
 
-# Orden de los 18 campos de cada línea
+# Orden de los 19 campos de cada línea
+# (los 18 del profe + "fecha_respuesta", que se llena al pasar a Solucionada)
 CAMPOS = [
     "id", "nombre_completo", "tipo_documento", "numero_documento", "tipo_telefono",
     "telefono_contacto", "correo_electronico", "direccion", "tipo_solicitud",
     "fecha_radicacion", "canal_recepcion", "asunto_titulo", "descripcion_detallada",
     "tipo_mascota", "campus_relacionado", "fecha_maxima_respuesta", "estado_peticion",
-    "usuario_registro",
+    "usuario_registro", "fecha_respuesta",
 ]
 
 # Flujo único permitido de estados
@@ -126,6 +128,9 @@ class c_archivos:
                 if actual in FLUJO_ESTADOS and \
                         FLUJO_ESTADOS.index(nuevo) == FLUJO_ESTADOS.index(actual) + 1:
                     registro["estado_peticion"] = nuevo
+                    # Al solucionar, se guarda la fecha y hora de respuesta
+                    if nuevo == "Solucionada":
+                        registro["fecha_respuesta"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                     lineas[i] = cls._registro_a_linea(registro)
                     cambiado = True
                 break
@@ -134,6 +139,26 @@ class c_archivos:
             with open(ruta, "w", encoding="utf-8", newline="\n") as f:
                 f.write("\n".join(lineas) + "\n")
         return cambiado
+
+
+    @classmethod
+    def asegurar_columna_respuesta(cls):
+        """Si un archivo todavía tiene el encabezado viejo de 18 campos, le agrega la columna
+        fecha_respuesta (vacía) a todas las líneas. Solo se hace una vez por archivo."""
+        for tipo in TIPOS:
+            ruta = cls.ruta_archivo(tipo)
+            if not ruta.exists():
+                continue
+            with open(ruta, "r", encoding="utf-8-sig") as f:
+                lineas = f.read().splitlines()
+            if not lineas or "fecha_respuesta" in lineas[0]:
+                continue
+            nuevas = ["|".join(CAMPOS)]
+            for linea in lineas[1:]:
+                if linea.strip():
+                    nuevas.append(cls._registro_a_linea(cls._linea_a_registro(linea)))
+            with open(ruta, "w", encoding="utf-8", newline="\n") as f:
+                f.write("\n".join(nuevas) + "\n")
 
 
 # ---- Funciones con los nombres acordados por el grupo (las que usa main.py) ----
@@ -155,3 +180,8 @@ def leer_pqrs(tipo):
 def actualizar_estado(tipo, id, nuevo):
     """True si el estado cambió, False si el cambio no está permitido."""
     return c_archivos.actualizar_estado(tipo, id, nuevo)
+
+
+def preparar_archivos():
+    """Deja los 4 archivos con la columna fecha_respuesta (se llama al iniciar el programa)."""
+    c_archivos.asegurar_columna_respuesta()
