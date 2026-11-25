@@ -113,15 +113,20 @@ def construir_reporte():
               texto_promedio(), ""]
     titulos = [("tipo_solicitud", "Por tipo de solicitud"), ("tipo_mascota", "Por tipo de mascota"),
                ("canal_recepcion", "Por canal de recepción"), ("campus_relacionado", "Por campus"),
-               ("estado_peticion", "Por estado"), ("tipo_documento", "Por tipo de documento")]
+               ("estado_peticion", "Por estado"), ("tipo_documento", "Por tipo de documento"),
+               ("usuario_registro", "Carga operativa: PQRS registradas por cada usuario")]
     for campo, titulo in titulos:
         lineas.append(titulo + ":")
         for valor, cantidad in contar_por(campo).items():
             porcentaje = cantidad * 100 / total if total else 0
             lineas.append(f"   {valor:<45} {cantidad:>6}  ({porcentaje:.1f} %)")
         lineas.append("")
-    lineas.append(f"PQRS vencidas (sin solucionar): {vencidas}")
-    lineas.append(f"PQRS próximas a vencer (≤ {DIAS_ALERTA} días): {por_vencer}")
+    # Estadística 5: cantidad y porcentaje (sobre el total de PQRS)
+    pct_vencidas = vencidas * 100 / total if total else 0
+    pct_por_vencer = por_vencer * 100 / total if total else 0
+    lineas.append("Alerta de vencimiento (plazo de respuesta):")
+    lineas.append(f"   PQRS vencidas (sin solucionar): {vencidas}  ({pct_vencidas:.1f} %)")
+    lineas.append(f"   PQRS próximas a vencer (≤ {DIAS_ALERTA} días): {por_vencer}  ({pct_por_vencer:.1f} %)")
     lineas.append("")
     lineas.append("Las 5 PQRS pendientes más antiguas:")
     for p in mas_antiguas():
